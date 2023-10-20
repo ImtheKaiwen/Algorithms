@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-20 01:29:59 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIwOzAxOjEzOjUyIMOWw5Y7Mjc5MQ=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIwOzAxOjI5OjU5IMOWw5Y7MTsyOTEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ccarp, negatop, yedi, a, girdi, i" type="Integer" array="False" size=""/>
+            <assign variable="girdi" expression="0"/>
+            <assign variable="ccarp" expression="1"/>
+            <assign variable="negatop" expression="0"/>
+            <assign variable="yedi" expression="0"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;Girdi :&quot;" newline="True"/>
+                <input variable="a"/>
+                <assign variable="girdi" expression="girdi+1"/>
+                <if expression="abs(a)%2==0">
+                    <then>
+                        <assign variable="ccarp" expression="ccarp*a"/>
+                    </then>
+                    <else>
+                        <if expression="a==7">
+                            <then>
+                                <assign variable="yedi" expression="yedi+1"/>
+                            </then>
+                            <else>
+                                <if expression="a&lt;0">
+                                    <then>
+                                        <assign variable="negatop" expression="negatop+a"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Girilen yedi say&#305;s&#305; :&quot;&amp;yedi" newline="True"/>
+            <output expression="&quot;Girilen &#231;ift say&#305;lar&#305;n &#231;arp&#305;m&#305; :&quot;&amp;ccarp" newline="True"/>
+            <output expression="&quot;Girilen negatif say&#305;lar&#305;n toplam&#305; :&quot;&amp; negatop" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

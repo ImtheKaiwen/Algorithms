@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-20 01:02:57 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIwOzEyOjQ2OjQzIMOWw5Y7Mjc5OQ=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIwOzAxOjAyOjU3IMOWw5Y7MTsyOTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, toplam, toplam1, i, c, d" type="Integer" array="False" size=""/>
+            <assign variable="toplam" expression="1"/>
+            <assign variable="toplam1" expression="1"/>
+            <output expression="&quot;L&#252;tfen bir say&#305; giriniz ;&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="c" expression="a"/>
+            <output expression="&quot;L&#252;tfen bir say&#305; daha giriniz ;&quot;" newline="True"/>
+            <input variable="b"/>
+            <assign variable="d" expression="b"/>
+            <for variable="i" start="2" end="a-1" direction="inc" step="1">
+                <while expression="a%i==0">
+                    <assign variable="a" expression="a/i"/>
+                    <if expression="a%i!=0">
+                        <then>
+                            <assign variable="toplam" expression="toplam+i"/>
+                        </then>
+                        <else/>
+                    </if>
+                </while>
+                <assign variable="a" expression="c"/>
+            </for>
+            <for variable="i" start="2" end="b-1" direction="inc" step="1">
+                <while expression="b%i==0">
+                    <assign variable="b" expression="b/i"/>
+                    <if expression="b%i!=0">
+                        <then>
+                            <assign variable="toplam1" expression="toplam1+i"/>
+                        </then>
+                        <else/>
+                    </if>
+                </while>
+                <assign variable="b" expression="d"/>
+            </for>
+            <if expression="toplam1==a &amp;&amp; toplam==b">
+                <then>
+                    <output expression="&quot;Girdi&#287;iniz say&#305;lar karde&#351; say&#305;lard&#305;r..&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girdi&#287;iniz say&#305;lar karde&#351; say&#305;lar de&#287;illerdir ..&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

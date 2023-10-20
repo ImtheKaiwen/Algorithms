@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-20 01:09:49 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIwOzAxOjAzOjA1IMOWw5Y7Mjc4OA=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIwOzAxOjA5OjQ5IMOWw5Y7MTsyOTEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, d" type="Integer" array="False" size=""/>
+            <assign variable="b" expression="0"/>
+            <output expression="&quot;L&#252;tfen bir say&#305; giriniz&quot;" newline="True"/>
+            <input variable="a"/>
+            <if expression="a%5==0">
+                <then>
+                    <while expression="a&gt;=5">
+                        <assign variable="a" expression="a/5"/>
+                        <assign variable="b" expression="b+1"/>
+                    </while>
+                    <output expression="&quot;Girdi&#287;iniz say&#305; 5in &quot;&amp;b&amp;&quot;.&quot;&amp;&quot;kuvveti&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girdi&#287;iniz ifade 5in bir kuvveti de&#287;ildir&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
