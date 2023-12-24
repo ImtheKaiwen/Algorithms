@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-02 05:39:38 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAyOzA1OjI3OjIwIMOWUzsyNjY1"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAyOzA1OjM5OjM4IMOWUzsxOzI3ODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="klavyeden say&#305;lar al&#305;cak ama ard arda girilen iki say&#305; birbirine e&#351;it oldu&#287;u zaman uygulama ekrana girilen de&#287;erlerin ortalamas&#305;n&#305; yazd&#305;racak"/>
+            <declare name="sayi, toplam, i, girdisayisi, onceki" type="Integer" array="False" size=""/>
+            <declare name="ortalama" type="Real" array="False" size=""/>
+            <declare name="devam" type="Boolean" array="False" size=""/>
+            <assign variable="devam" expression="true"/>
+            <assign variable="toplam" expression="0"/>
+            <assign variable="girdisayisi" expression="0"/>
+            <output expression="&quot;L&#252;tfen bir girdi giriniz :&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <assign variable="toplam" expression="toplam+sayi"/>
+            <assign variable="girdisayisi" expression="girdisayisi+1"/>
+            <assign variable="onceki" expression="sayi"/>
+            <while expression="devam">
+                <output expression="&quot;L&#252;fen bir say&#305; giriniz :&quot;" newline="True"/>
+                <input variable="sayi"/>
+                <if expression="onceki==sayi">
+                    <then>
+                        <assign variable="devam" expression="false"/>
+                    </then>
+                    <else>
+                        <assign variable="toplam" expression="toplam+sayi"/>
+                        <assign variable="girdisayisi" expression="girdisayisi+1"/>
+                        <assign variable="onceki" expression="sayi"/>
+                    </else>
+                </if>
+            </while>
+            <assign variable="ortalama" expression="toplam/girdisayisi"/>
+            <output expression="&quot;Girdi&#287;iniz say&#305;lar&#305;n ortalamas&#305; :&quot;&amp;ortalama" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

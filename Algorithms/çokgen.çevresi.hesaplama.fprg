@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-13 11:11:37 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTEzOzExOjAxOjA0IMOWUzsyNjU3"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTEzOzExOjExOjM3IMOWUzsxOzI3NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kenarsayisi, kenaruzunlugu, girdi, girdi1, alan, cevre" type="Integer" array="False" size=""/>
+            <output expression="&quot;Kenar uzunlu&#287;unu giriniz :&quot;" newline="True"/>
+            <input variable="kenaruzunlugu"/>
+            <output expression="&quot;kenar say&#305;s&#305;n&#305; giriniz :&quot;" newline="True"/>
+            <input variable="kenarsayisi"/>
+            <output expression="&quot;&#199;okgenin alan&#305;n&#305; hesaplamak i&#231;in 1 i tu&#351;lay&#305;n&#305;z :&quot;" newline="True"/>
+            <input variable="girdi"/>
+            <if expression="girdi==1">
+                <then>
+                    <assign variable="alan" expression="kenaruzunlugu^2"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;&#199;okgeninizin &#231;evresini hesaplamak i&#231;in 3 &#252; tu&#351;lay&#305;n&#305;z :&quot;" newline="True"/>
+            <input variable="girdi1"/>
+            <if expression="girdi1==3">
+                <then>
+                    <assign variable="cevre" expression="kenarsayisi*kenaruzunlugu"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;&#199;okgeninizin alan&#305; :&quot;&amp;&quot; &quot;&amp; alan" newline="True"/>
+            <output expression="&quot;&#199;okgeninizin &#231;evresi :&quot;&amp;&quot; &quot;&amp;cevre" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

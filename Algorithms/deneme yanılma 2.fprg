@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-02 07:52:39 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAyOzA3OjQxOjE4IMOWUzsyNjcw"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAyOzA3OjUyOjM5IMOWUzsxOzI3ODM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pcguess, sayi, hak" type="Integer" array="False" size=""/>
+            <declare name="devam" type="Boolean" array="False" size=""/>
+            <comment text="0-100 aras&#305;nda randoms say&#305;&#13;&#10;"/>
+            <assign variable="devam" expression="true"/>
+            <assign variable="hak" expression="10"/>
+            <output expression="&quot;GUESS GAME&quot;" newline="True"/>
+            <output expression="&quot;Bilgisayar(0-100) aras&#305;nda bir say&#305; tahmin edecek ve siz de onu tahmin etmeye &#231;al&#305;&#351;acaks&#305;n&#305;z&quot;" newline="True"/>
+            <output expression="&quot;Bilgisayar tahmin ediyor ...&quot;" newline="True"/>
+            <assign variable="pcguess" expression="random(100)"/>
+            <output expression="&quot;Bilgisayar say&#305;s&#305;n&#305; tuttu s&#305;ra sizde !&quot;" newline="True"/>
+            <while expression="true">
+                <if expression="hak==0">
+                    <then>
+                        <output expression="&quot;10 kez deneme hakk&#305;n&#305;z bitmmi&#351;tir !&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;L&#252;tfen tahmininizi giriniz :&quot;" newline="True"/>
+                <input variable="sayi"/>
+                <if expression="sayi&gt;=0 &amp;&amp; sayi&lt;=100">
+                    <then/>
+                    <else>
+                        <while expression="sayi&lt;0 || sayi&gt;100">
+                            <output expression="&quot;L&#252;tfen ge&#231;erli de&#287;er aral&#305;&#287;&#305;nda bir say&#305; giriniz &quot;" newline="True"/>
+                            <input variable="sayi"/>
+                        </while>
+                    </else>
+                </if>
+                <if expression="sayi==pcguess">
+                    <then>
+                        <output expression="&quot;Tebrikler cevab&#305;n&#305;z do&#287;ru !&quot;" newline="True"/>
+                        <assign variable="devam" expression="false"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Tahmininiz yanl&#305;&#351;t&#305;r l&#252;tfen tekrar deneyiniz&quot;" newline="True"/>
+                        <assign variable="hak" expression="hak-1"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

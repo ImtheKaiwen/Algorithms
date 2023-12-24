@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 01:31:00 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAxOjI0OjM3IMOWw5Y7Mjc5Nw=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAxOjMxOjAwIMOWw5Y7MTsyODkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="girilenyil" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen bir y&#305;l girin ;&quot;" newline="True"/>
+            <input variable="girilenyil"/>
+            <if expression="girilenyil%4==0">
+                <then>
+                    <if expression="girilenyil%100==0">
+                        <then>
+                            <if expression="girilenyil%400==0">
+                                <then>
+                                    <output expression="&quot;Girdi&#287;iniz y&#305;l art&#305;k y&#305;ld&#305;r.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Girdi&#287;iniz y&#305;l art&#305;k y&#305;l de&#287;ildir .&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Girdi&#287;iniz y&#305;l ar&#305;k y&#305;ld&#305;r.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Girdi&#287;iniz y&#305;l art&#305;k y&#305;l de&#287;ildir.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

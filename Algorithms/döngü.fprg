@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 11:28:54 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzExOjI2OjAyIMOWUzsyNjYx"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzExOjI4OjU0IMOWUzsxOzI3Nzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, girilensayi" type="Integer" array="False" size=""/>
+            <declare name="kontrol" type="Boolean" array="False" size=""/>
+            <assign variable="kontrol" expression="true"/>
+            <assign variable="girilensayi" expression="0"/>
+            <while expression="kontrol">
+                <output expression="&quot;girdi :&quot;" newline="True"/>
+                <input variable="a"/>
+                <assign variable="girilensayi" expression="girilensayi+1"/>
+                <if expression="girilensayi==5">
+                    <then>
+                        <assign variable="kontrol" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <output expression="&quot;D&#246;ng&#252; durdu&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 01:21:31 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzEyOjM0OjUxIMOWw5Y7Mjc5Ng=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAxOjIxOjMxIMOWw5Y7MTsyODk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="suankiyil, girilenyil, suankiay, girilenay, yas, girilengun, suankigun" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen &#351;uanki y&#305;l&#305; giriniz ;&quot;" newline="True"/>
+            <input variable="suankiyil"/>
+            <output expression="&quot;L&#252;tfen &#351;uanki ay&#305; giriniz ;&quot;" newline="True"/>
+            <input variable="suankiay"/>
+            <output expression="&quot;L&#252;tfen &#351;uanki g&#252;n&#252; giriniz ;&quot;" newline="True"/>
+            <input variable="suankigun"/>
+            <output expression="&quot;L&#252;tfen kullan&#305;c&#305;n&#305;n do&#287;du&#287;u y&#305;l&#305; giriniz ;&quot;" newline="True"/>
+            <input variable="girilenyil"/>
+            <output expression="&quot;L&#252;tfen kullan&#305;c&#305;n&#305;n do&#287;du&#287;u ay&#305; giriniz ;&quot;" newline="True"/>
+            <input variable="girilenay"/>
+            <output expression="&quot;L&#252;tfen kullan&#305;c&#305;n&#305;n do&#287;du&#287;u g&#252;n&#252; giriniz ;&quot;" newline="True"/>
+            <input variable="girilengun"/>
+            <if expression="girilenay&lt;suankiay">
+                <then>
+                    <assign variable="yas" expression="suankiyil-girilenyil"/>
+                </then>
+                <else>
+                    <if expression="girilenay==suankiay">
+                        <then>
+                            <if expression="girilengun&lt;suankigun">
+                                <then>
+                                    <assign variable="yas" expression="suankiyil-girilenyil"/>
+                                </then>
+                                <else>
+                                    <assign variable="yas" expression="suankiyil-girilenyil-1"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="yas" expression="suankiyil-girilenyil-1"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Kullan&#305;c&#305;n&#305;n ya&#351;&#305; :&quot;&amp;yas" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

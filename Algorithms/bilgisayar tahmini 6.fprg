@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 03:36:47 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAzOjI1OjI4IMOWw5Y7MjgwMA=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAzOjM2OjQ3IMOWw5Y7MTsyOTEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, deneme, i" type="Integer" array="False" size=""/>
+            <assign variable="deneme" expression="0"/>
+            <output expression="&quot;L&#252;tfen bir de&#287;er giriniz :&quot;" newline="True"/>
+            <input variable="a"/>
+            <for variable="i" start="1" end="6" direction="inc" step="1">
+                <assign variable="b" expression="random(63)"/>
+                <if expression="i==6">
+                    <then>
+                        <assign variable="b" expression="a"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Bilgisayar&#305;n tahmini :&quot;&amp;b" newline="True"/>
+                <if expression="b==a">
+                    <then>
+                        <output expression="&quot;Bilgisayar do&#287;ru tahmin etti&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

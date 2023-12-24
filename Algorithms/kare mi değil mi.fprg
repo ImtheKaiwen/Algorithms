@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 02:10:36 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAyOjAyOjIxIMOWw5Y7Mjc4Nw=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAyOjEwOjM2IMOWw5Y7MTsyOTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="k1, k2, k3, k4" type="Integer" array="False" size=""/>
+            <output expression="&quot;Birinci kenar&#305;n uzunlu&#287;unuz giriniz :&quot;" newline="True"/>
+            <input variable="k1"/>
+            <output expression="&quot;&#304;kinci kenar&#305;n uzunlu&#287;unuz giriniz :&quot;" newline="True"/>
+            <input variable="k2"/>
+            <output expression="&quot;&#252;&#231;&#252;nc&#252; kenar&#305;n uzunlu&#287;unuz giriniz :&quot;" newline="True"/>
+            <input variable="k3"/>
+            <output expression="&quot;D&#246;rd&#252;nc&#252; kenar&#305;n uzunlu&#287;unuz giriniz :&quot;" newline="True"/>
+            <input variable="k4"/>
+            <if expression="k1==k2&amp;&amp;k3==k4&amp;&amp;k2==k3&amp;&amp;k1==k4">
+                <then>
+                    <output expression="&quot;Bu d&#246;rtgen bir karedir&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Bu d&#246;rtgen bir kare de&#287;ildir&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-13 09:17:03 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTEzOzA5OjEzOjA0IMOWUzsyNjY4"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTEzOzA5OjE3OjAzIMOWUzsxOzI3Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, r, i, toplam" type="Integer" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <while expression="true">
+                <output expression="&quot;Enter n :&quot;" newline="True"/>
+                <input variable="n"/>
+                <output expression="&quot;Enter r :&quot;" newline="True"/>
+                <input variable="r"/>
+                <for variable="i" start="1" end="r" direction="inc" step="2">
+                    <assign variable="toplam" expression="toplam+(n^i)"/>
+                </for>
+                <output expression="&quot;Sum :&quot;&amp;toplam" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

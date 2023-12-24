@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-02 05:27:10 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAyOzA1OjE4OjIwIMOWUzsyNjY1"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAyOzA1OjI3OjEwIMOWUzsxOzI3NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="besebolunen, ikiyebolunen, sayi, i, hemikihembes" type="Integer" array="False" size=""/>
+            <declare name="bes, iki" type="Boolean" array="False" size=""/>
+            <assign variable="besebolunen" expression="0"/>
+            <assign variable="ikiyebolunen" expression="0"/>
+            <assign variable="hemikihembes" expression="0"/>
+            <assign variable="iki" expression="false"/>
+            <assign variable="bes" expression="false"/>
+            <do expression="sayi!=-1">
+                <output expression="&quot;L&#252;tfen bir say&#305; giriniz :&quot;" newline="True"/>
+                <input variable="sayi"/>
+                <if expression="abs(sayi)%5==0">
+                    <then>
+                        <assign variable="besebolunen" expression="besebolunen+1"/>
+                        <assign variable="bes" expression="true"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="abs(sayi)%2==0">
+                    <then>
+                        <assign variable="ikiyebolunen" expression="ikiyebolunen+1"/>
+                        <assign variable="iki" expression="true"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="bes==true&amp;&amp;iki==true">
+                    <then>
+                        <assign variable="hemikihembes" expression="hemikihembes+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <output expression="&quot;Girilen de&#287;erlerden be&#351;e b&#246;l&#252;nebilenlerin say&#305;s&#305;:&quot;&amp;besebolunen" newline="True"/>
+            <output expression="&quot;Girilen de&#287;erlerden ikiye b&#246;l&#252;nebilenlerin say&#305;s&#305;:&quot;&amp;ikiyebolunen" newline="True"/>
+            <output expression="&quot;Girilen de&#287;erlerden hem be&#351;e hem ikiye b&#246;l&#252;nebilenlerin say&#305;s&#305;:&quot;&amp;hemikihembes" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-26 07:04:37 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzAxOjAxOjMwIMOWw5Y7Mjc5MA=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA3OjA0OjM3IMOWUzsxMzsyODM0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="//Girilen de&#287;erleri b&#252;y&#252;kten k&#252;&#231;&#252;&#287;e do&#287;ru s&#305;ralayan program &#13;&#10;&#13;&#10;--&#214;ncelikle kullan&#305;c&#305;dan 10 adet girdi al&#305;n&#305;z &#13;&#10;&#13;&#10;--bu girdileri olu&#351;turdu&#287;unuz dizinin i. indexine atamak i&#231;in bir for d&#246;ng&#252;s&#252; a&#231;&#305;n&#305;z ve bu kullan&#305;c&#305;dan gelen say&#305;y&#305; atama i&#351;lemini burada ger&#231;ekle&#351;tiriniz&#13;&#10;&#13;&#10;--dizinin indexlerine atam i&#351;lemleri bittikten sonra buradaki say&#305;lar&#305;n b&#252;y&#252;kl&#252;klerini kontrol etmek i&#231;in bir tane daha fr d&#246;ng&#252;s&#252; kullan&#305;n&#305;z &#13;&#10;&#13;&#10;--bu d&#246;ng&#252;de yine i 0'dan 9'a kadar d&#246;ns&#252;n ve her seferindeki i de&#287;erini bir sonraki i de&#287;eri ile kar&#351;&#305;la&#351;t&#305;rs&#305;n b&#252;y&#252;k olan&#305; k&#252;&#231;&#252;k olan&#305;yla yer de&#287;i&#351;tirsin ve burada ilk s&#305;ralama i&#351;lemini ger&#231;ekle&#351;tirmi&#351; olsun.&#13;&#10;&#13;&#10;--daha sonra yukar&#305;daki i&#351;lemi de for d&#246;ng&#252;s&#252; i&#231;erisinde yazarak bu i&#351;lemi 10 kez tekrarlats&#305;n ve burada t&#252;m say&#305;lar b&#252;y&#252;kten k&#252;&#231;&#252;&#287;edo&#287;ru s&#305;ralanm&#305;&#351; olsun&#13;&#10;&#13;&#10;--daha sonra bu diziyi ekrana yazd&#305;rmak i&#231;in yine bir for d&#246;ng&#252;&#252;s olu&#351;turman&#305;z gerekmektedir &#13;&#10;&#13;&#10;--Burada da yine bir for d&#246;ng&#252;s&#252; olu&#351;turup i'yi 0'dan 9'a kadar d&#246;nd&#252;r&#252;n ve her d&#246;nd&#252;&#287;&#252;nde dizinizin i. indexini ekrana yazd&#305;r&#305;n ve bu &#351;ekilde dizinizin t&#252;m elemanlar&#305;n&#305; ekrana yazd&#305;rm&#305;&#351; olacaks&#305;n&#305;z.&#13;&#10;&#13;&#10;--bitir."/>
+            <declare name="girdi" type="Integer" array="True" size="10"/>
+            <declare name="say, i, a, b" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Girdi :&quot;" newline="True"/>
+                <input variable="say"/>
+                <assign variable="girdi[i]" expression="say"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <for variable="b" start="0" end="9" direction="inc" step="1">
+                    <if expression="b==9">
+                        <then/>
+                        <else>
+                            <if expression="girdi[b]&gt;girdi[b+1]">
+                                <then/>
+                                <else>
+                                    <assign variable="a" expression="girdi[b]"/>
+                                    <assign variable="girdi[b]" expression="girdi[b+1]"/>
+                                    <assign variable="girdi[b+1]" expression="a"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;En b&#252;y&#252;k eleman :&quot;&amp;girdi[0]" newline="True"/>
+            <output expression="&quot;En k&#252;&#231;&#252;k eleman :&quot;&amp;girdi[9]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

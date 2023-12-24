@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-02 05:18:13 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAyOzA1OjEwOjI3IMOWUzsyNjY0"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAyOzA1OjE4OjEzIMOWUzsxOzI3NzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="//Bilgisayar random bir &#351;ekilde 0 ile 100 aras&#305;nda bir say&#305; tutacak ve kullan&#305;c&#305; bunu tahmin etmeye &#231;al&#305;&#351;acak e&#287;er bunu 10 tahmin sonras&#305;nda do&#287;ru bilemez ise ekrana 10 tahmin boyunca bilemediniz &#351;ekilde yazd&#305;r&#305;p program&#305;n bitmesini sa&#287;la&#13;&#10;"/>
+            <declare name="sayi, kullanicigirdisi, i, hak" type="Integer" array="False" size=""/>
+            <assign variable="hak" expression="10"/>
+            <output expression="&quot;Bilgisayar [0,100] aras&#305;ndan bir say&#305;y&#305; se&#231;iyor ...&quot;" newline="True"/>
+            <assign variable="sayi" expression="random(100)"/>
+            <output expression="&quot;Bilgisayar say&#305;y&#305; se&#231;ti ! &quot;" newline="True"/>
+            <output expression="&quot;S&#305;ra sizde&quot;" newline="True"/>
+            <while expression="hak&gt;0">
+                <output expression="&quot;L&#252;tfen tahmin etti&#287;iniz say&#305;y&#305; giriniz :&quot;" newline="True"/>
+                <input variable="kullanicigirdisi"/>
+                <if expression="kullanicigirdisi==sayi">
+                    <then>
+                        <output expression="&quot;Tebrikler do&#287;ru bildiniz !&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="hak" expression="hak-1"/>
+                    </else>
+                </if>
+                <if expression="hak==0">
+                    <then>
+                        <output expression="&quot;10 defa denediniz ve do&#287;ru sonucu bulamad&#305;n&#305;z hakk&#305;n&#305;z bitmi&#351;tir&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

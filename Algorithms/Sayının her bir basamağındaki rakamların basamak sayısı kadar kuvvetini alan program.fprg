@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-27 03:25:55 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI3OzAyOjQ4OjQwIMOWUzsyNjcz"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI3OzAzOjI1OjU1IMOWUzsxOzI3ODM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="//basamaksay&#305;s&#305; kadar basamaklar&#305;n&#305;n kuvvetini alan aloritmay&#305; olu&#351;tur&#13;&#10;"/>
+            <declare name="girdi, basamak, temp, temp1, i, a" type="Integer" array="False" size=""/>
+            <declare name="sayi" type="String" array="False" size=""/>
+            <assign variable="basamak" expression="0"/>
+            <output expression="&quot;L&#252;tfen bir say&#305; giriniz :&quot;" newline="True"/>
+            <input variable="girdi"/>
+            <assign variable="temp" expression="girdi"/>
+            <assign variable="sayi" expression="ToString(temp)"/>
+            <while expression="girdi&gt;0">
+                <assign variable="girdi" expression="girdi/10"/>
+                <assign variable="basamak" expression="basamak+1"/>
+            </while>
+            <declare name="basamaklardakisayilar" type="Integer" array="True" size="basamak"/>
+            <for variable="i" start="0" end="basamak-1" direction="inc" step="1">
+                <assign variable="a" expression="ToInteger(char(sayi,i))"/>
+                <assign variable="basamaklardakisayilar[i]" expression="a"/>
+            </for>
+            <for variable="i" start="0" end="basamak-1" direction="inc" step="1">
+                <output expression="(i+1)&amp;&quot;.&quot;&amp;&quot; basamaktaki rakam&#305;n basamak say&#305;s&#305; kadar &#252;ss&#252; :&quot;&amp;basamaklardakisayilar[i]^basamak" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

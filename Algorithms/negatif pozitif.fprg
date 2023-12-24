@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-26 07:21:15 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI1OzExOjQ3OjU3IMOWUzsyNjc4"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA3OjIxOjE1IMOWUzsyOzI3Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="//Girilen 10 adet de&#287;erden hangileri pozitif hangileri ne gatif bunlar&#305; bulup bunlar&#305; ay&#305;ran ve s&#305;n&#305;fland&#305;ran bir program &#13;&#10;&#13;&#10;--Kullan&#305;c&#305;dan for d&#246;ng&#252;s&#252; i&#231;erisinde bir de&#287;er al ve bu ald&#305;&#287;&#305;n de&#287;eri 10 adet tamsay&#305; tutan bir dizinin i. indexine tek tek ata&#13;&#10;&#13;&#10;--Daha sonra bir tane daha for d&#246;ng&#252;s&#252; a&#231; ve bu d&#246;ng&#252;n&#252;n i&#231;erisinde dizinin i. indexini tek tek d&#246;n&#13;&#10;&#13;&#10;--Burada d&#246;nd&#252;&#287;&#252;nde dizinini. indexindeki say&#305; e&#287;er 0 dan b&#252;y&#252;kse pozitif say&#305;lar ad&#305;ndaki de&#287;i&#351;keni 1 artt&#305;r &#13;&#10;&#13;&#10;--E&#287;er s&#305;f&#305;rdan k&#252;&#231;&#252;kse negatif say&#305;lar ad&#305;ndaki de&#287;i&#351;keni 1 artt&#305;r &#13;&#10;&#13;&#10;--Daha sonra bu de&#287;i&#351;kenleri kendi c&#252;mlelerinizle ifade ederek ekrana yazd&#305;r&#305;n &#13;&#10;&#13;&#10;--bitti."/>
+            <declare name="pozitifsayi, negatifsayi, girdi, i" type="Integer" array="False" size=""/>
+            <assign variable="pozitifsayi" expression="0"/>
+            <assign variable="negatifsayi" expression="0"/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;Girdi :&quot;" newline="True"/>
+                <input variable="girdi"/>
+                <if expression="girdi&gt;0">
+                    <then>
+                        <assign variable="pozitifsayi" expression="pozitifsayi+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="girdi&lt;0">
+                    <then>
+                        <assign variable="negatifsayi" expression="negatifsayi+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="girdi==0">
+                    <then/>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Pozitif say&#305; say&#305;s&#305; :&quot;&amp;pozitifsayi" newline="True"/>
+            <output expression="&quot;Negatif say&#305; say&#305;s&#305; :&quot;&amp;negatifsayi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

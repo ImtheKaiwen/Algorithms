@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 02:29:11 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAyOjE4OjE0IMOWw5Y7Mjc5Ng=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAyOjI5OjExIMOWw5Y7MTsyOTAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="hiz, dk, t, i" type="Integer" array="False" size=""/>
+            <assign variable="hiz" expression="0"/>
+            <output expression="&quot;Ka&#231;&#305;nc&#305; dakikadaki h&#305;z&#305; istiyorsan&#305;z giriniz :&quot;" newline="True"/>
+            <input variable="t"/>
+            <for variable="i" start="1" end="15" direction="inc" step="1">
+                <assign variable="dk" expression="i"/>
+                <assign variable="hiz" expression="hiz+32"/>
+                <if expression="t==dk">
+                    <then>
+                        <output expression="t&amp;&quot;.&quot;&amp;&quot;andaki h&#305;z&#305; :&quot;&amp;hiz" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="15" end="35" direction="inc" step="1">
+                <assign variable="dk" expression="i"/>
+                <assign variable="hiz" expression="hiz+0"/>
+                <if expression="t==dk">
+                    <then>
+                        <output expression="t&amp;&quot;.&quot;&amp;&quot;andaki h&#305;z&#305; :&quot;&amp;hiz" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="35" end="50" direction="inc" step="1">
+                <assign variable="dk" expression="i"/>
+                <assign variable="hiz" expression="hiz-32"/>
+                <if expression="t==dk">
+                    <then>
+                        <output expression="t&amp;&quot;.&quot;&amp;&quot;andaki h&#305;z&#305; :&quot;&amp;hiz" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

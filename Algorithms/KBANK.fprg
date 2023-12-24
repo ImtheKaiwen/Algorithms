@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-12 01:36:03 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTEyOzAxOjIxOjQ2IMOWw5Y7Mjc5NQ=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTEyOzAxOjM2OjAzIMOWw5Y7MTsyOTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="//Borsa uygulamas&#305; tarz&#305; bir &#351;ey"/>
+            <comment text="//firmalar olsun t&#305;kland&#305;&#287;&#305;nda lot fiyat&#305; olsun ve art&#305;&#351; d&#252;&#351;&#252;&#351; random olsun para yat&#305;rma olsun para &#231;ekme olsun hesap olsun, kart numaras&#305; olsun, kullan&#305;c&#305; ad&#305; soyad&#305; olsun"/>
+            <declare name="Dongu" type="Boolean" array="False" size=""/>
+            <assign variable="Dongu" expression="true"/>
+            <while expression="Dongu">
+                <output expression="&quot;----KBANK'A HO&#350;GELD&#304;N&#304;Z----&quot;" newline="True"/>
+                <output expression="&quot;1- Hesap bilgileri&quot;" newline="True"/>
+                <output expression="&quot;2- Hisse kurumlar&#305;&quot;" newline="True"/>
+                <output expression="&quot;3- Para yat&#305;rma&quot;" newline="True"/>
+                <output expression="&quot;4- Para &#231;ekme&quot;" newline="True"/>
+                <output expression="&quot;5- &#199;&#305;k&#305;&#351;&quot;" newline="True"/>
+                <input variable="secim"/>
+                <if expression="secim==1">
+                    <then>
+                        <output expression="isim" newline="True"/>
+                        <output expression="soyisim" newline="True"/>
+                        <output expression="para" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="secim==2">
+                            <then/>
+                            <else>
+                                <if expression="secim==3">
+                                    <then/>
+                                    <else>
+                                        <if expression="secim==4">
+                                            <then/>
+                                            <else>
+                                                <if expression="secim==5">
+                                                    <then>
+                                                        <assign variable="Dongu" expression="false"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

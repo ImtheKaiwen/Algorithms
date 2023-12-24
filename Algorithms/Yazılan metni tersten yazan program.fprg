@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-27 11:09:46 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI3OzEwOjU4OjU4IMOWw5Y7MjgxMw=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI3OzExOjA5OjQ2IMOWw5Y7MTsyOTE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="//Kullan&#305;c&#305;dan al&#305;nan say&#305;y&#305; tersten yazd&#305;r"/>
+            <declare name="metin, terstenyazim" type="String" array="False" size=""/>
+            <assign variable="terstenyazim" expression="&quot;&quot;"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen bir metin giriniz&quot;" newline="True"/>
+            <input variable="metin"/>
+            <declare name="harfler" type="String" array="True" size="len(metin)"/>
+            <for variable="i" start="0" end="len(metin)-1" direction="inc" step="1">
+                <assign variable="harfler[i]" expression="char(metin, i)"/>
+            </for>
+            <for variable="i" start="size(harfler)-1" end="0" direction="dec" step="1">
+                <assign variable="terstenyazim" expression="terstenyazim&amp;harfler[i]"/>
+            </for>
+            <output expression="&quot;Girmi&#351; oldu&#287;unuz metnin tersten yaz&#305;m&#305; :&quot;&amp;terstenyazim" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

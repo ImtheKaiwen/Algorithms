@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-26 05:13:25 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA1OjAyOjI5IMOWUzsyNjcy"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA1OjEzOjI1IMOWUzsxOzI3Nzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Kullan&#305;c&#305;ndan 10 tane de&#287;er al ve bunlar&#305; bir diziye koy daha sonra bu dizidekileri tekrar &#231;a&#287;&#305;r ve bilgisayara okut e&#287;er bunlardan i&#231;lerinde 50 den b&#252;y&#252;k veya e&#351;it olanlar&#305; varsa bunlara ba&#351;ar&#305;l&#305; tag&#305;n&#305; ver e&#287;er de&#287;illerse bunlara ba&#351;ar&#305;s&#305;z tag&#305;n&#305; ver daha sonra ba&#351;ar&#305;l&#305; olanlar&#305;n veba&#351;ar&#305;s&#305;z olanlar&#305;n&#305;n say&#305;lar&#305;n&#305; ekrana yazd&#305;r."/>
+            <declare name="girilensayilar" type="Integer" array="True" size="10"/>
+            <declare name="sayi, i, basariliolanlar, basarisizolanlar" type="Integer" array="False" size=""/>
+            <assign variable="basarisizolanlar" expression="0"/>
+            <assign variable="basariliolanlar" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;L&#252;tfen bir say&#305; giriniz :&quot;" newline="True"/>
+                <input variable="sayi"/>
+                <if expression="sayi&gt;100">
+                    <then>
+                        <while expression="sayi&gt;100">
+                            <output expression="&quot;L&#252;tfen ge&#231;erli bir say&#305; giriniz :&quot;" newline="True"/>
+                            <input variable="sayi"/>
+                        </while>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="girilensayilar[i]" expression="sayi"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="girilensayilar[i]&gt;=50">
+                    <then>
+                        <assign variable="basariliolanlar" expression="basariliolanlar+1"/>
+                    </then>
+                    <else>
+                        <assign variable="basarisizolanlar" expression="basarisizolanlar+1"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="&quot;Girdi&#287;iniz y&#305;lsonu notlar&#305;ndan ba&#351;ar&#305;l&#305; ve ba&#351;ar&#305;s&#305;z olanlar&#305;n&#305;n say&#305;s&#305; :&quot;" newline="True"/>
+            <output expression="&quot;Ba&#351;ar&#305;l&#305; :&quot;&amp; basariliolanlar" newline="True"/>
+            <output expression="&quot;Ba&#351;ar&#305;s&#305;z :&quot;&amp; basarisizolanlar" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

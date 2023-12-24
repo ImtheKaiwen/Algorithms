@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-26 04:57:26 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA0OjIyOjIxIMOWUzsyNjY1"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA0OjU3OjI2IMOWUzsxOzI3ODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi" type="Integer" array="True" size="10"/>
+            <declare name="a, b, i, girilensayi" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;L&#252;tfen bir say&#305; giriniz :&quot;" newline="True"/>
+                <input variable="girilensayi"/>
+                <assign variable="sayi[i]" expression="girilensayi"/>
+            </for>
+            <assign variable="a" expression="sayi[0]"/>
+            <for variable="i" start="1" end="9" direction="inc" step="1">
+                <if expression="sayi[i]&lt;a">
+                    <then>
+                        <assign variable="a" expression="sayi[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <if expression="sayi[i]==a">
+                    <then>
+                        <assign variable="b" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Girdi&#287;iniz dizideki en k&#252;&#231;&#252;k eleman :&quot;&amp;a" newline="True"/>
+            <output expression="&quot;Bu eleman dizinizin &quot;&amp;b&amp;&quot;.&quot;&amp;&quot; eleman&#305;d&#305;r.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

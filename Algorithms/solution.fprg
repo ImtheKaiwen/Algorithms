@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-23 04:10:16 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTIzOzA0OjA3OjIyIMOWUzsyNjY3"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTIzOzA0OjEwOjE2IMOWUzsxOzI3NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y, xcarpan, ycarpan, i" type="Integer" array="False" size=""/>
+            <assign variable="xcarpan" expression="0"/>
+            <assign variable="ycarpan" expression="0"/>
+            <input variable="x"/>
+            <input variable="y"/>
+            <for variable="i" start="1" end="x-1" direction="inc" step="1">
+                <if expression="x%i==0">
+                    <then>
+                        <assign variable="xcarpan" expression="xcarpan+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <for variable="i" start="1" end="y-1" direction="inc" step="1">
+                <if expression="y%i==0">
+                    <then>
+                        <assign variable="ycarpan" expression="ycarpan+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="xcarpan==y &amp;&amp; ycarpan==x">
+                <then>
+                    <output expression="&quot;dost&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Dost de&#287;il&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

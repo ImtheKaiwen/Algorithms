@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-11 05:59:45 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTExOzA1OjMyOjI5IMOWUzsyNjcw"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTExOzA1OjU5OjQ1IMOWUzsxOzI3ODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, i, tempx, basamaklen, asalmi, asalcarpan, asalabolunme, j" type="Integer" array="False" size=""/>
+            <assign variable="asalabolunme" expression="0"/>
+            <assign variable="asalcarpan" expression="0"/>
+            <assign variable="asalmi" expression="0"/>
+            <assign variable="basamaklen" expression="0"/>
+            <input variable="sayi"/>
+            <assign variable="tempx" expression="sayi"/>
+            <while expression="tempx&gt;0">
+                <assign variable="tempx" expression="tempx/10"/>
+                <assign variable="basamaklen" expression="basamaklen+1"/>
+            </while>
+            <for variable="i" start="1" end="sayi" direction="inc" step="1">
+                <if expression="sayi%i==0">
+                    <then>
+                        <for variable="j" start="1" end="i" direction="inc" step="1">
+                            <if expression="i%j==0">
+                                <then>
+                                    <assign variable="asalmi" expression="asalmi+1"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <if expression="asalmi&gt;2 || asalmi&lt;2">
+                            <then>
+                                <assign variable="asalmi" expression="0"/>
+                            </then>
+                            <else>
+                                <assign variable="asalmi" expression="0"/>
+                                <assign variable="asalcarpan" expression="asalcarpan+1"/>
+                                <if expression="sayi%(i^2)==0">
+                                    <then>
+                                        <assign variable="asalabolunme" expression="asalabolunme+1"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="asalabolunme==asalcarpan">
+                <then>
+                    <output expression="&quot;G&#252;&#231;l&#252; say&#305;&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;G&#252;&#231;s&#252;z say&#305;&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

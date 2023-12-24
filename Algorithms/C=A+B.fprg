@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 02:13:55 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAyOjEwOjU2IMOWw5Y7Mjc5NA=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAyOjEzOjU1IMOWw5Y7MTsyOTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c" type="Integer" array="False" size=""/>
+            <output expression="&quot;Birinci say&#305;y&#305; giriniz :&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;&#304;kinci say&#305;y&#305; giriniz :&quot;" newline="True"/>
+            <input variable="b"/>
+            <if expression="a&gt;50&amp;&amp;b&gt;50">
+                <then>
+                    <assign variable="c" expression="a+b"/>
+                    <output expression="&quot;sonuc :&quot;&amp;c" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girdi&#287;iniz say&#305;lar 50den b&#252;y&#252;k de&#287;iller. &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

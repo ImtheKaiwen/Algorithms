@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-21 01:54:46 &#214;&#214;"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAxOjM5OjU3IMOWw5Y7MjgwNQ=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTIxOzAxOjU0OjQ2IMOWw5Y7MTsyOTA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen Log taban&#305;n&#305; giriniz&quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;L&#252;tfen log &#252;ss&#252;n&#252; giriniz&quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;sonuc :&quot;&amp;(log(b)/log(a))" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

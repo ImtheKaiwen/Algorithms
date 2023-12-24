@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-26 07:08:05 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzEyOjI2OjEyIMOWw5Y7Mjc5OQ=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA3OjA4OjA1IMOWUzsyOzI3ODM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="//&#231;al&#305;&#351;anlar&#305;n maa&#351;lar&#305;n&#305; &#252;rettikleri par&#231;a say&#305;s&#305;na g&#246;re zam yapan bir sistemin kodlamas&#305;&#13;&#10;&#13;&#10;--&#214;ncelikle i&#351;&#231;ilere &#351;uanki maa&#351;lar&#305;n&#305; sorunuz ve bunlar&#305; olu&#351;turdu&#287;unuz de&#287;i&#351;kenlerin i&#231;erisine aktar&#305;n&#305;z &#13;&#10;&#13;&#10;--Maa&#351; alma i&#351;leminden sonra bir de bu i&#351;&#231;ilerin &#252;rettikleri par&#231;a say&#305;lar&#305;n&#305; al&#305;n&#305;z&#13;&#10;&#13;&#10;--E&#287;er &#252;rettikleri par&#231;a say&#305;s&#305; 0 ile 10 aras&#305;nda ise maa&#351;lar&#305;na 5000 tl zamn yap&#305;n&#305;z &#13;&#10;&#13;&#10;--E&#287;er &#252;rettikleri par&#231;a say&#305;lar&#305; 10 ile 30 aras&#305;nda ise maa&#351;lar&#305;na 8000tl zam yap&#305;n&#305;z &#13;&#10;&#13;&#10;--E&#287;er &#252;rettikleri par&#231;a say&#305;s&#305; 30dan daha b&#252;y&#252;k ise maa&#351;lar&#305;na 12000tl zam yap&#305;n&#305;z &#13;&#10;&#13;&#10;--Ve yeni maa&#351;lar&#305;n&#305; ekrana yazd&#305;r&#305;n&#305;z &#13;&#10;&#13;&#10;--bitti."/>
+            <declare name="normalmaas, urettigiparca" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#350;uanki maa&#351;&#305;n&#305;z&#305; giriniz :&quot;" newline="True"/>
+            <input variable="normalmaas"/>
+            <output expression="&quot;&#220;retti&#287;iniz par&#231;a say&#305;s&#305;n&#305; giriniz :&quot;" newline="True"/>
+            <input variable="urettigiparca"/>
+            <if expression="0&lt;urettigiparca">
+                <then>
+                    <if expression="urettigiparca&gt;=10">
+                        <then>
+                            <if expression="urettigiparca&gt;=30">
+                                <then>
+                                    <assign variable="normalmaas" expression="normalmaas+12000"/>
+                                </then>
+                                <else>
+                                    <assign variable="normalmaas" expression="normalmaas+8000"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="normalmaas" expression="normalmaas+5000"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <while expression="urettigiparca&lt;0">
+                        <output expression="&quot;L&#252;tfen ge&#231;erli bir say&#305; giriniz :&quot;" newline="True"/>
+                        <input variable="urettigiparca"/>
+                    </while>
+                </else>
+            </if>
+            <output expression="&quot;Maa&#351;&#305;n&#305;z :&quot;&amp;normalmaas" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

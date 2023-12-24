@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-08 03:33:04 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTA4OzAyOjU4OjA2IMOWUzsyNjc2"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTA4OzAzOjMzOjA0IMOWUzsyOzI3Nzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, basamak1, basamak2, toplam, b, k, l, m, n" type="Integer" array="False" size=""/>
+            <assign variable="b" expression="0"/>
+            <declare name="sayi, c" type="String" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <for variable="i" start="10" end="99" direction="inc" step="1">
+                <assign variable="b" expression="i"/>
+                <assign variable="sayi" expression="ToString(b)"/>
+                <declare name="strbasamaklar" type="String" array="True" size="len(sayi)"/>
+                <declare name="basamaklar" type="Integer" array="True" size="2"/>
+                <if expression="len(sayi)&gt;2 &amp;&amp; len(sayi)&lt;2">
+                    <then>
+                        <while expression="len(sayi)!=2">
+                            <output expression="&quot;L&#252;tfen iki basamakl&#305; bir say&#305; giriniz&quot;" newline="True"/>
+                            <input variable="sayi"/>
+                        </while>
+                    </then>
+                    <else>
+                        <for variable="k" start="0" end="len(sayi)-1" direction="inc" step="1">
+                            <assign variable="strbasamaklar[k]" expression="(char(sayi,k))"/>
+                        </for>
+                        <for variable="l" start="0" end="len(sayi)-1" direction="inc" step="1">
+                            <assign variable="basamaklar[l]" expression="ToInteger(strbasamaklar[l])"/>
+                        </for>
+                        <assign variable="basamak2" expression="basamaklar[1]"/>
+                        <assign variable="basamak1" expression="basamaklar[0]"/>
+                        <for variable="m" start="1" end="basamak1" direction="inc" step="1">
+                            <if expression="basamak1%m==0">
+                                <then>
+                                    <assign variable="toplam" expression="toplam+1"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </for>
+                        <if expression="toplam!=2">
+                            <then/>
+                            <else>
+                                <for variable="n" start="1" end="basamak2" direction="inc" step="1">
+                                    <if expression="basamak2%n==0">
+                                        <then>
+                                            <assign variable="toplam" expression="toplam+1"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </for>
+                                <if expression="toplam!=2">
+                                    <then/>
+                                    <else>
+                                        <output expression="sayi" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

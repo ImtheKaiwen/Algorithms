@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-26 06:09:09 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzAxOjAxOjMwIMOWw5Y7Mjc5MA=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA2OjA5OjA5IMOWUzsxNDsyODM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="--Kullan&#305;c&#305;dan 10 adet de&#287;er al&#13;&#10;&#13;&#10;--daha sonra bu de&#287;erlerden b&#252;y&#252;k olan&#305;n&#305; k&#252;&#231;&#252;k olan&#305;yla   yer de&#287;i&#351;tir ve bunu 10 kez tekarla&#13;&#10;&#13;&#10;--Bunlar tamamland&#305;ktan sonra en b&#252;y&#252;k de&#287;er 0.index&#13;&#10;  en k&#252;&#231;&#252;k de&#287;er ise 9. index olacakt&#305;r &#13;&#10; --Bunlar&#305; ekrana yazd&#305;r."/>
+            <declare name="girdi" type="Integer" array="True" size="10"/>
+            <declare name="say, i, a, b" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="0"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Girdi :&quot;" newline="True"/>
+                <input variable="say"/>
+                <assign variable="girdi[i]" expression="say"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <for variable="b" start="0" end="9" direction="inc" step="1">
+                    <if expression="b==9">
+                        <then/>
+                        <else>
+                            <if expression="girdi[b]&gt;girdi[b+1]">
+                                <then/>
+                                <else>
+                                    <assign variable="a" expression="girdi[b]"/>
+                                    <assign variable="girdi[b]" expression="girdi[b+1]"/>
+                                    <assign variable="girdi[b+1]" expression="a"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;En b&#252;y&#252;k eleman :&quot;&amp;girdi[0]" newline="True"/>
+            <output expression="&quot;En k&#252;&#231;&#252;k eleman :&quot;&amp;girdi[9]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

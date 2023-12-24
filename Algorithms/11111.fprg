@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-13 09:31:17 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTEzOzA5OjIwOjAyIMOWUzsyNjY0"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTEzOzA5OjMxOjE3IMOWUzsxOzI3ODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, toplam, r" type="Integer" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <output expression="&quot;Enter r :&quot;" newline="True"/>
+            <input variable="r"/>
+            <for variable="i" start="0" end="r" direction="inc" step="1">
+                <assign variable="toplam" expression="toplam+(10^i)"/>
+                <output expression="toplam" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

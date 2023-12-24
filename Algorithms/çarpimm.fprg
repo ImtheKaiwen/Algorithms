@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-07 03:46:34 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTA3OzAzOjQzOjM4IMOWUzsyNjc1"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTA3OzAzOjQ2OjM0IMOWUzsxOzI3ODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#199;arp&#305;m tablosu ve&#13;&#10;i&#231; i&#231;e d&#246;ng&#252;ler&#13;&#10;"/>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="10" direction="inc" step="1">
+                <for variable="j" start="1" end="10" direction="inc" step="1">
+                    <output expression="i&amp;&quot;x&quot;&amp;j&amp;(i*j)" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-27 02:41:07 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI3OzAyOjE3OjU3IMOWUzsyNjc3"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI3OzAyOjQxOjA3IMOWUzsxOzI3Nzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="//Kullan&#305;c&#305;dan al&#305;nan say&#305;lar&#305;n basamaklar&#305;n&#305; ay&#305;rarak ekrana yazd&#305;ran program&#305; kodlay&#305;n&#305;z"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="girdist, girdi" type="String" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen bir say&#305; giriniz :&quot;" newline="True"/>
+            <input variable="girdist"/>
+            <declare name="basamaklar" type="String" array="True" size="len(girdist)"/>
+            <for variable="i" start="0" end="len(girdist)-1" direction="inc" step="1">
+                <assign variable="basamaklar[i]" expression="char(girdist, i)"/>
+            </for>
+            <for variable="i" start="0" end="len(girdist)-1" direction="inc" step="1">
+                <output expression="&quot;Say&#305;n&#305;z&#305;n &quot;&amp;10^(len(girdist)-(i+1))&amp;&quot; ler basama&#287;&#305;ndaki rakam :&quot;&amp;basamaklar[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-08 04:13:18 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTA4OzA0OjA5OjMxIMOWUzsyNjcy"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTA4OzA0OjEzOjE4IMOWUzsxOzI3ODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="girdi" type="String" array="False" size=""/>
+            <declare name="sayi" type="String" array="False" size=""/>
+            <input variable="girdi"/>
+            <assign variable="sayi" expression="&quot; &quot;"/>
+            <for variable="i" start="len(sayi)" end="0" direction="dec" step="1">
+                <assign variable="sayi" expression="sayi&amp;(char(girdi,i))"/>
+            </for>
+            <output expression="sayi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

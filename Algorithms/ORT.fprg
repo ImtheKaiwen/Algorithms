@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-08 04:09:13 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTA4OzAzOjU5OjEyIMOWUzsyNjc1"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTA4OzA0OjA5OjEzIMOWUzsxOzI3ODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, basamak, toplam, i, b" type="Integer" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <assign variable="i" expression="0"/>
+            <input variable="sayi"/>
+            <declare name="basamaklar" type="Integer" array="True" size="3"/>
+            <assign variable="basamaklar[0]" expression="sayi%10"/>
+            <while expression="sayi&gt;0">
+                <assign variable="basamak" expression="sayi%10"/>
+                <assign variable="sayi" expression="sayi/10"/>
+                <assign variable="basamaklar[i]" expression="basamak"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <for variable="i" start="0" end="size(basamaklar)-1" direction="inc" step="1">
+                <assign variable="toplam" expression="toplam+basamaklar[i]"/>
+            </for>
+            <output expression="toplam/3" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

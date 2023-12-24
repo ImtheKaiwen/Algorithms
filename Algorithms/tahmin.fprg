@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-03 02:35:35 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAzOzAyOjE4OjU0IMOWUzsyNjcw"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTExLTAzOzAyOjM1OjM1IMOWUzszOzI3Nzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pcguess, tutulan, i, adim" type="Integer" array="False" size=""/>
+            <declare name="devam" type="Boolean" array="False" size=""/>
+            <assign variable="devam" expression="true"/>
+            <assign variable="adim" expression="0"/>
+            <assign variable="tutulan" expression="random(63)"/>
+            <assign variable="pcguess" expression="random(63)"/>
+            <assign variable="adim" expression="adim+1"/>
+            <while expression="devam">
+                <output expression="adim&amp;&quot;.&quot;&amp;&quot; &quot;&amp;&quot;Ad&#305;mdaki tahmin :&quot;&amp;pcguess" newline="True"/>
+                <if expression="adim==6">
+                    <then>
+                        <assign variable="pcguess" expression="tutulan"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="pcguess==tutulan">
+                    <then>
+                        <output expression="adim&amp;&quot;.&quot;&amp;&quot; &quot;&amp;&quot;Ad&#305;mda bulundu&quot;" newline="True"/>
+                        <assign variable="devam" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="pcguess" expression="random(63)"/>
+                <assign variable="adim" expression="adim+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

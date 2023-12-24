@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-26 07:30:41 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI1OzExOjQ1OjUxIMOWUzsyNjcw"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA3OjMwOjQxIMOWUzszOzI3Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="-- i tamsay&#305; de&#287;i&#351;kenini tan&#305;mla &#13;&#10;&#13;&#10;-- for d&#246;ng&#252;s&#252; a&#231;&#13;&#10;&#13;&#10;-- ad&#305;m&#305; -1 ayarla ve 500'den 100'e kadar d&#246;ns&#252;n&#13;&#10;&#13;&#10;-- her d&#246;ng&#252;de ekrana i de&#287;erini yazd&#305;r &#13;&#10;&#13;&#10;-- bitir"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="500" end="100" direction="dec" step="1">
+                <output expression="i" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

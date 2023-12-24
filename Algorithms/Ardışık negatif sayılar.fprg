@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-13 10:43:18 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTEzOzEwOjA0OjI3IMOWUzsyNjY0"/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTEzOzEwOjQzOjE4IMOWUzsyOzI3NzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, girilensayiadedi, ucebolunebilen, sayi1" type="Integer" array="False" size=""/>
+            <assign variable="ucebolunebilen" expression="0"/>
+            <assign variable="girilensayiadedi" expression="0"/>
+            <output expression="&quot;Girdi :&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <assign variable="girilensayiadedi" expression="girilensayiadedi +1"/>
+            <while expression="true">
+                <output expression="&quot;Girdi :&quot;" newline="True"/>
+                <input variable="sayi1"/>
+                <assign variable="girilensayiadedi" expression="girilensayiadedi+1"/>
+                <if expression="sayi&lt;0 &amp;&amp; sayi1&lt;0">
+                    <then>
+                        <output expression="&quot;Ard&#305;&#351;&#305;k negatif say&#305; girdiniz :&quot;" newline="True"/>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else>
+                        <assign variable="sayi" expression="sayi1"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

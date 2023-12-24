@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="w11"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-26 07:41:12 &#214;S"/>
+        <attribute name="created" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzEyOjUwOjM0IMOWw5Y7MjgwMA=="/>
+        <attribute name="edited" value="dzExO0RFU0tUT1AtSVQxTDE4QzsyMDIzLTEwLTI2OzA3OjQxOjEyIMOWUzszOzI3Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="-- boluenceksayi,boleceksayi,x de&#287;i&#351;kenlerini tan&#305;mla&#13;&#10;&#13;&#10;-- x=0&#13;&#10;&#13;&#10;-- boluneceksayi'yi kullan&#305;c&#305;dan al&#13;&#10;&#13;&#10;-- boleceksayi'yi kullan&#305;c&#305;dan al &#13;&#10;&#13;&#10;-- boluneceksayi&lt;boleceksayi ise kalan olarak boluneceksayi'yi yazd&#305;r b&#246;l&#252;m olarak ise 0 yazd&#305;r&#13;&#10;&#13;&#10;-- boluneceksayi&gt;=boleceksayi ise while d&#246;ng&#252;s&#252; a&#231; ve boluneceksayi&lt;boleceksayi olana kadar devam ettir ve i&#231;erisinde boluneceksayi=boluneceksayi-boleceksayi kodunu &#231;al&#305;&#351;t&#305;r ve x'i bir artt&#305;r.&#13;&#10;&#13;&#10;-- while d&#246;ng&#252;s&#252;nden &#231;&#305;kt&#305;ktan sonra ekrana kalan olarak boluneceksayi'yi yazd&#305;r ve b&#246;l&#252;m olarak x'i yazd&#305;r.&#13;&#10;&#13;&#10;-- bitir"/>
+            <declare name="boluneceksayi, bolunecekrakam, x" type="Real" array="False" size=""/>
+            <assign variable="x" expression="0"/>
+            <output expression="&quot;B&#246;lmek istedi&#287;iniz say&#305;y&#305; girin :&quot;" newline="True"/>
+            <input variable="boluneceksayi"/>
+            <output expression="&quot;Ka&#231;a b&#246;lmek istedi&#287;inizi giriniz :&quot;" newline="True"/>
+            <input variable="bolunecekrakam"/>
+            <if expression="boluneceksayi&gt;bolunecekrakam">
+                <then>
+                    <while expression="boluneceksayi&gt;=bolunecekrakam">
+                        <assign variable="boluneceksayi" expression="boluneceksayi-bolunecekrakam"/>
+                        <assign variable="x" expression="x+1"/>
+                    </while>
+                    <output expression="&quot;B&#246;l&#252;m&quot;&amp;x" newline="True"/>
+                    <output expression="&quot;Kalan&quot;&amp;boluneceksayi" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;kalan&quot;&amp;boluneceksayi" newline="True"/>
+                    <output expression="&quot;B&#246;l&#252;m&quot;&amp;0" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
